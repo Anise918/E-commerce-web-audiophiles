@@ -8,6 +8,16 @@ import xx59 from '/cart/shared/mobile/image-xx59-headphones.jpg'
 import x99mark1 from '/cart/shared/mobile/image-xx99-mark-one-headphones.jpg'
 import speaker from '/cart/shared/mobile/image-zx9-speaker.jpg'
 
+import xx99mark1tb from'/product-xx99-mark-one-headphones/tablet/image-product.jpg'
+import xx99mark1des from'/product-xx99-mark-one-headphones/desktop/image-product.jpg'
+
+import zx9tb from '/cart/product-zx9-speaker/tablet/image-product.jpg'
+import zx9des from '/cart/product-zx9-speaker/desktop/image-product.jpg'
+
+import yx1tb from '/product-yx1-earphones/tablet/image-product.jpg'
+import yx1des from '/product-yx1-earphones/desktop/image-product.jpg'
+
+
 import Gallery3zx7md from '/cart/product-zx9-speaker/product-zx7-speaker/tablet/image-gallery-3.jpg'
 import Gallery3zx7lg from '/cart/product-zx9-speaker/product-zx7-speaker/desktop/image-gallery-3.jpg'
 import Gallery2zx7md from '/cart/product-zx9-speaker/product-zx7-speaker/tablet/image-gallery-2.jpg'
@@ -26,7 +36,7 @@ import x99mark1lg from '/cart/shared/desktop/image-xx99-mark-one-headphones.jpg'
 
 
 import xx99mark1 from'/product-xx99-mark-one-headphones/mobile/image-product.jpg'
-import yx1 from '/product-yx1-earphones/tablet/image-product.jpg'
+import yx1 from '/product-yx1-earphones/mobile/image-product.jpg'
 import zx9 from '/cart/product-zx9-speaker/mobile/image-category-page-preview.jpg'
 import {MdOutlineNavigateNext} from 'react-icons/md'
 
@@ -118,7 +128,7 @@ const Zx7 = () => {
          <div className='lg:flex items-center justify-evenly '>
         <div className='lg:w-1/2 '>
 
-      <h1 className='font-semibold text-3xl mb-5'>FEATURES</h1>
+      <h1 className='font-semibold text-3xl mb-5 mt-10'>FEATURES</h1>
       <p className='font-light mb-5'>
         Reap the advantages of a flat diaphragm 
         tweeter cone. This provides a fast response 
@@ -258,55 +268,89 @@ const Zx7 = () => {
 
     
     
-      <div className='relative bg-white mt-40'>
-          <div className='flex justify-center'>
-        <img className='w-3/4 border rounded-lg -mt-20' src={xx99mark1}
-         alt="Product Image 1" />
-         </div>
-        <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2  flex flex-col  items-center justify-end text-center'>
-          <h4 className='text-black text-sm font-bold '>HEADPHONES</h4>
-          <div className='flex flex-row items-center justify-center'>
-            <p className='mr-2 text-gray-400 text-sm'>SHOP</p>
-            <Link to='/headphones'>
-            <MdOutlineNavigateNext className='text-orange-700' />
-            </Link>
-          </div>
-        </div>
       </div>
-      <div className="relative bg-white rounded-lg mt-20 w-full h-full flex justify-center items-center">
-      
-  <img  className=' -p-10 w-3/4 border rounded-lg h-auto 
-  justify-center items-center ' src={zx9} alt="Product Image 2" />
-  <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2  flex flex-col items-center  text-center p-4  '>
-    <h4 className='text-black font-bold '>SPEAKERS</h4>
-    <span className='flex flex-row items-center justify-center mt-2 '>
-      <p className='text-gray-400 text-sm '>SHOP</p>
-      <Link to='/speakers'>
-      <MdOutlineNavigateNext className='text-orange-500'/>
-      </Link>
-    </span>
-    
-    </div>
-  </div>
-  <div className="relative bg-white mt-20 mb-20 flex justify-center">
-  <img className='w-3/4 h-1/8 -mt-15 border rounded-lg' src={yx1} alt="Product Image 2" />
-  <div className='absolute bottom-0 left-1/2 p-5 transform -translate-x-1/2 flex flex-col items-center  text-center p-4  '>
-    <h4 className='text-black font-bold '>EARPHONES</h4>
-    <span className='flex flex-row items-center justify-center mt-2 '>
-      <p className='text-gray-400 text-sm '>SHOP</p>
-      <Link to='/earphones'>
-      <MdOutlineNavigateNext className='text-orange-500'/>
-      </Link>
-    </span>
-    </div>
-  </div>
+
+      <div className=' md:flex md:w-3/4 mx-auto gap-3'>
+
+<div className='relative max-w-xs mx-auto bg-white mt-20 w-3/4 mx-auto'>
+<div className='border rounded-lg overflow-hidden relative'>
 
 
-      
-      
-      
+<img className='md:hidden lg:hidden max-w-full h-auto
+-mt-12' src={xx99mark1} alt="Product Image 1" />
+<img className='hidden sm:hidden lg:hidden md:block max-w-full h-auto
+-mt-12' src={xx99mark1tb} alt="Product Image 1" />
+<img className='hidden sm:hidden md:hidden lg:block max-w-full h-auto
+-mt-12' src={xx99mark1des} alt="Product Image 1" />
 
-    </div>
+
+
+<div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-end text-center'>
+ <h4 className='text-black text-sm font-bold'>HEADPHONES</h4>
+ <div className='flex flex-row items-center justify-center'>
+   <p className='mr-2 text-gray-400 text-sm'>SHOP</p>
+   <Link to='/Headphones'>
+     <MdOutlineNavigateNext className='text-orange-700' />
+   </Link>
+ </div>
+</div>
+</div>
+</div>
+
+
+
+
+<div className='relative max-w-xs mx-auto bg-white mt-20 w-3/4 mx-auto'>
+<div className='border rounded-lg overflow-hidden relative'>
+<img className='md:hidden lg:hidden max-w-full h-auto -mt-12' 
+src={zx9} alt="Product Image 1" />
+<img className='hidden sm:hidden lg:hidden md:block max-w-full h-auto -mt-12' 
+src={zx9tb} alt="Product Image 1" />
+<img className='hidden sm:hidden md:hidden lg:block max-w-full h-auto -mt-12' 
+src={zx9des} alt="Product Image 1" />
+
+
+<div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-end text-center'>
+ <h4 className='text-black text-sm font-bold'>SPEAKERS</h4>
+ <div className='flex flex-row items-center justify-center'>
+   <p className='mr-2 text-gray-400 text-sm'>SHOP</p>
+   <Link to='/Speakers'>
+     <MdOutlineNavigateNext className='text-orange-700' />
+   </Link>
+ </div>
+</div>
+</div>
+</div>
+
+ 
+<div className='relative max-w-xs mx-auto bg-white mt-20 mb-20 w-3/4 mx-auto'>
+<div className='border rounded-lg overflow-hidden relative'>
+<img className='md:hidden lg:hidden max-w-full h-auto 
+-mt-12' src={yx1} alt="Product Image 1" />
+<img className='hidden sm:hidden lg:hidden md:block max-w-full h-auto 
+-mt-12' src={yx1tb} alt="Product Image 1" />
+<img className='hidden sm:hidden md:hidden lg:block max-w-full h-auto 
+-mt-12' src={yx1des} alt="Product Image 1" />
+
+<div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-end text-center'>
+ <h4 className='text-black text-sm font-bold'>EARPHONES</h4>
+ <div className='flex flex-row items-center justify-center'>
+   <p className='mr-2 text-gray-400 text-sm'>SHOP</p>
+   <Link to='/Earphones'>
+     <MdOutlineNavigateNext className='text-orange-700' />
+   </Link>
+ </div>
+</div>
+</div>
+</div>
+</div>
+
+
+ 
+ 
+
+
+
     </div>
   )
 }

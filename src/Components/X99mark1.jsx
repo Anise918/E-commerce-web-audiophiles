@@ -1,4 +1,7 @@
-import React from 'react'
+import React,{useState} from 'react'
+import Cartcard from './Cartcard'; 
+
+
 import { Link } from 'react-router-dom'
 import xx99mark1 from'/product-xx99-mark-one-headphones/mobile/image-product.jpg'
 import Gallery1Mark1 from '/product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg'
@@ -16,6 +19,14 @@ import speakerlg from '/cart/shared/desktop/image-zx9-speaker.jpg'
 
 import xx59md from '/cart/shared/tablet/image-xx59-headphones.jpg'
 import xx59lg from '/cart/shared/desktop/image-xx59-headphones.jpg'
+import xx99mark1tb from'/product-xx99-mark-one-headphones/tablet/image-product.jpg'
+import xx99mark1des from'/product-xx99-mark-one-headphones/desktop/image-product.jpg'
+
+import zx9tb from '/cart/product-zx9-speaker/tablet/image-product.jpg'
+import zx9des from '/cart/product-zx9-speaker/desktop/image-product.jpg'
+
+import yx1tb from '/product-yx1-earphones/tablet/image-product.jpg'
+import yx1des from '/product-yx1-earphones/desktop/image-product.jpg'
 
 
 
@@ -31,16 +42,56 @@ import Gallery3Mark1md from '/product-xx99-mark-one-headphones/tablet/image-gall
 import Gallery3Mark1lg from '/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg'
 
 
-import yx1 from '/product-yx1-earphones/tablet/image-product.jpg'
+import yx1 from '/product-yx1-earphones/mobile/image-product.jpg'
 import zx9 from '/cart/product-zx9-speaker/mobile/image-category-page-preview.jpg'
 import {MdOutlineNavigateNext} from 'react-icons/md'
 
 
-const X99mark1 = () => {
+
+const X99mark1 = ({setCartItems,handleCartState}) => {
+
+  
+   
+  const [itemCount, setItemCount] = useState(1);
+   
+
+  
+
+
+  const decreaseQuantity = () => {
+    if (itemCount > 1) {
+      setItemCount(itemCount - 1);
+    }
+  };
+
+  const increaseQuantity = () => {
+    setItemCount(itemCount + 1);
+  };
+
+  const resetQuantity = () => {
+    setItemCount(1);
+  };
+
+  
+  const addToCart = () => {
+    setCartItems((prevCartItems) => prevCartItems + itemCount);
+    console.log(`Adding ${itemCount} item(s) to cart`);
+  
+   
+    
+  };
+  
+  
+
+
+
+
   return (
     <div>
+    
     <Link className='text-gray-500 mt-5 ' to ='/'>Go back</Link>
     <div className='w-3/4 mx-auto'>
+         
     <div className='flex justify-center'>
         <img className='lg:hidden md:hidden  mb-5' src={xx99mark1}/>
         </div>
@@ -57,17 +108,18 @@ const X99mark1 = () => {
      <p className='md:hidden text-black font-bold mt-5 mb-5'>$1750</p>
       <div className=' md:hidden flex flex-row mb-20'>
         
-        <button className='bg-gray-300 py-2 px-3'> - 
+        <button   onClick={decreaseQuantity}  className='bg-gray-300 py-2 px-3'> - 
           
         </button>
-        <button className='bg-gray-300 py-2 px-3 '>   1  
-          
+        <button onClick={resetQuantity} className='bg-gray-300 py-2 px-3 '>     
+          {itemCount}
           </button>
-          <button className='bg-gray-300  py-2 px-3 mr-3'>  +
+          <button  onClick={increaseQuantity} className='bg-gray-300  py-2 px-3 mr-3'>  +
           
           </button>
         
-        <p className='bg-orange-main text-white px-5  py-2 '>ADD TO <br/>
+        <p onClick={addToCart}  className='bg-orange-main
+         text-white px-5  py-2 '>ADD TO
         CART</p>
       </div>
 
@@ -75,7 +127,7 @@ const X99mark1 = () => {
      <div className='md:flex'>
      <div className='items-center'>
       <img src={xx99mark1md} className='hidden sm:hidden lg:hidden md:block w-3/4 mt-8 mb-10 mx-auto'/>
-    <img src={xx99mark1lg} className='hidden sm:hidden md:hidden lg:block w-1/2 mx-auto'/>
+    <img src={xx99mark1lg} className='hidden sm:hidden md:hidden lg:block w-3/4 mx-auto'/>
     </div>
 
     <div className='hidden sm:hidden md:block md:w-3/4 mt-10 md:mb:9 items-center '>
@@ -105,7 +157,7 @@ const X99mark1 = () => {
           
           </button>
         
-        <button className='bg-orange-main text-white px-7  py-2 '>ADD TO <br/>
+        <button className='bg-orange-main text-white px-7  py-2 '>ADD TO 
         CART</button>
        </div>
       </div>
@@ -204,7 +256,7 @@ const X99mark1 = () => {
     <div className='flex flex-col justify-center items-center'>
       <p className='font-semibold text-2xl mt-8 mb-8'> XX99 Mark II </p>
       <Link to='/product'>
-        <button className='bg-orange-700 py-2 px-7 mb-10 border  '>
+        <button className='bg-orange-main py-2 px-7 mb-10 border  '>
           <span className='text-white text-sm'>SEE PRODUCT</span>
         </button>
       </Link>
@@ -219,7 +271,7 @@ const X99mark1 = () => {
     <div className='flex flex-col justify-center items-center'>
       <p className='text-2xl font-semibold mt-8 mb-8 '>XX59</p>
       <Link to='/x59'>
-        <button className='bg-orange-700 py-2 px-7 border  mb-10'>
+        <button className='bg-orange-main py-2 px-7 border  mb-10'>
           <span className='text-white text-sm'>SEE PRODUCT</span>
         </button>
       </Link>
@@ -234,59 +286,97 @@ const X99mark1 = () => {
     <div className='flex flex-col justify-center items-center'>
       <p className='text-2xl font-semibold mt-10 mb-8'>ZX9 Speaker</p>
       <Link to='/zx9'>
-        <button className='py-2 px-7 bg-orange-700 '>
+        <button className='py-2 px-7 bg-orange-main '>
           <span className='text-white text-sm'>SEE PRODUCT</span>
         </button>
       </Link>
     </div>
   </div>
 </div>
+</div>
+
+
+<div className=' md:flex md:w-3/4 mx-auto gap-3'>
+
+<div className='relative max-w-xs mx-auto bg-white mt-20 w-3/4 mx-auto'>
+<div className='border rounded-lg overflow-hidden relative'>
+
+
+<img className='md:hidden lg:hidden max-w-full h-auto
+-mt-12' src={xx99mark1} alt="Product Image 1" />
+<img className='hidden sm:hidden lg:hidden md:block max-w-full h-auto
+-mt-12' src={xx99mark1tb} alt="Product Image 1" />
+<img className='hidden sm:hidden md:hidden lg:block max-w-full h-auto
+-mt-12' src={xx99mark1des} alt="Product Image 1" />
+
+
+
+<div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-end text-center'>
+ <h4 className='text-black text-sm font-bold'>HEADPHONES</h4>
+ <div className='flex flex-row items-center justify-center'>
+   <p className='mr-2 text-gray-400 text-sm'>SHOP</p>
+   <Link to='/Headphones'>
+     <MdOutlineNavigateNext className='text-orange-700' />
+   </Link>
+ </div>
+</div>
+</div>
+</div>
+
+
+
+
+<div className='relative max-w-xs mx-auto bg-white mt-20 w-3/4 mx-auto'>
+<div className='border rounded-lg overflow-hidden relative'>
+<img className='md:hidden lg:hidden max-w-full h-auto -mt-12' 
+src={zx9} alt="Product Image 1" />
+<img className='hidden sm:hidden lg:hidden md:block max-w-full h-auto -mt-12' 
+src={zx9tb} alt="Product Image 1" />
+<img className='hidden sm:hidden md:hidden lg:block max-w-full h-auto -mt-12' 
+src={zx9des} alt="Product Image 1" />
+
+
+<div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-end text-center'>
+ <h4 className='text-black text-sm font-bold'>SPEAKERS</h4>
+ <div className='flex flex-row items-center justify-center'>
+   <p className='mr-2 text-gray-400 text-sm'>SHOP</p>
+   <Link to='/Speakers'>
+     <MdOutlineNavigateNext className='text-orange-700' />
+   </Link>
+ </div>
+</div>
+</div>
+</div>
+
+ 
+<div className='relative max-w-xs mx-auto bg-white mt-20 mb-20 w-3/4 mx-auto'>
+<div className='border rounded-lg overflow-hidden relative'>
+<img className='md:hidden lg:hidden max-w-full h-auto 
+-mt-12' src={yx1} alt="Product Image 1" />
+<img className='hidden sm:hidden lg:hidden md:block max-w-full h-auto 
+-mt-12' src={yx1tb} alt="Product Image 1" />
+<img className='hidden sm:hidden md:hidden lg:block max-w-full h-auto 
+-mt-12' src={yx1des} alt="Product Image 1" />
+
+<div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-end text-center'>
+ <h4 className='text-black text-sm font-bold'>EARPHONES</h4>
+ <div className='flex flex-row items-center justify-center'>
+   <p className='mr-2 text-gray-400 text-sm'>SHOP</p>
+   <Link to='/Earphones'>
+     <MdOutlineNavigateNext className='text-orange-700' />
+   </Link>
+ </div>
+</div>
+</div>
+</div>
+</div>
 
 
 
 
 
-      <div className='relative bg-white mt-40'>
-          <div className='flex justify-center'>
-        <img className='w-3/4 border rounded-lg -mt-20' src={xx99mark1}
-         alt="Product Image 1" />
-         </div>
-        <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2  flex flex-col  items-center justify-end text-center'>
-          <h4 className='text-black text-sm font-bold '>HEADPHONES</h4>
-          <div className='flex flex-row items-center justify-center'>
-            <p className='mr-2 text-gray-400 text-sm'>SHOP</p>
-            <MdOutlineNavigateNext className='text-orange-700' />
-          </div>
-        </div>
-      </div>
-      <div className="relative bg-white rounded-lg mt-20 w-full h-full flex justify-center items-center">
-      
-  <img  className=' -p-10 w-3/4 border rounded-lg h-auto 
-  justify-center items-center ' src={zx9} alt="Product Image 2" />
-  <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2  flex flex-col items-center  text-center p-4  '>
-    <h4 className='text-black font-bold '>SPEAKERS</h4>
-    <span className='flex flex-row items-center justify-center mt-2 '>
-      <p className='text-gray-400 text-sm '>SHOP</p>
-      <MdOutlineNavigateNext className='text-orange-500'/>
-    </span>
-    
-    </div>
-  </div>
-  <div className="relative bg-white mt-20 mb-20 flex justify-center">
-  <img className='w-3/4 h-1/8 -mt-15 border rounded-lg' src={yx1} alt="Product Image 2" />
-  <div className='absolute bottom-0 left-1/2 p-5 transform -translate-x-1/2 flex flex-col items-center  text-center p-4  '>
-    <h4 className='text-black font-bold '>EARPHONES</h4>
-    <span className='flex flex-row items-center justify-center mt-2 '>
-      <p className='text-gray-400 text-sm '>SHOP</p>
-      <MdOutlineNavigateNext className='text-orange-500'/>
-    </span>
-    </div>
-  </div>
 
-
-
-       </div>
-
+     
     </div>
   )
 }

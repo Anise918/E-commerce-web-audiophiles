@@ -16,19 +16,29 @@ import zzx9 from '/cart/home/mobile/image-speaker-zx7.jpg'
 import yx1er from '/cart/home/mobile/image-earphones-yx1.jpg'
 import bestGear from '/cart/shared/mobile/image-best-gear.jpg'
 import xx99mark1 from'/product-xx99-mark-one-headphones/mobile/image-product.jpg'
+import xx99mark1tb from'/product-xx99-mark-one-headphones/tablet/image-product.jpg'
+import xx99mark1des from'/product-xx99-mark-one-headphones/desktop/image-product.jpg'
+
+import zx9tb from '/cart/product-zx9-speaker/tablet/image-product.jpg'
+import zx9des from '/cart/product-zx9-speaker/desktop/image-product.jpg'
+
+import yx1tb from '/product-yx1-earphones/tablet/image-product.jpg'
+import yx1des from '/product-yx1-earphones/desktop/image-product.jpg'
+
+
 import {Link} from 'react-router-dom'
 
 import {MdOutlineNavigateNext} from 'react-icons/md'
 
 const Items = () => {
   return (
-    <div>
-      <hr />
+    <div className=''>
+      <hr className='text-gray-600' />
       
-     
+     <div className=''>
       <div className='relative  '>
   
-  <div className='lg:hidden md:hidden'>
+  <div className='lg:hidden md:hidden '>
     <div className='  absolute inset-0 flex flex-col justify-center items-center'>
       <h4 className='text-sm text-gray-500 tracking-widest'>NEW PRODUCT</h4>
       <h1 className='font-semibold mb-4 capitalize text-white text-4xl'>XX99 Mark II <br/> Headphones</h1>
@@ -36,7 +46,7 @@ const Items = () => {
         Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
       </p>
       <Link to='/product'>
-        <button className='bg-orange-700 py-2 px-4 rounded text-white hover:bg-orange-600 text-lg font-semibold'>
+        <button className='bg-orange-main py-2 px-4 rounded text-white hover:bg-orange-600 text-lg font-semibold'>
           <span>SEE PRODUCT</span>
         </button>
       </Link>
@@ -54,7 +64,7 @@ const Items = () => {
     Experience natural, lifelike audio and exceptional build quality made for the<br/> passionate music enthusiast.
   </p>
   <Link to='/product'>
-    <button className='bg-orange-main py-2 px-4  text-white hover:bg-orange-600 text-sm '>
+    <button className='bg-orange-light py-2 px-4  text-white hover:bg-orange-600 text-sm '>
       <span>SEE PRODUCT</span>
     </button>
   </Link>
@@ -87,55 +97,87 @@ const Items = () => {
   </div>
 </div>
 
-     <div className=' '>
+     <div className=' md:flex w-3/4 mx-auto gap-3'>
+
+     <div className='relative max-w-xs  bg-white mt-20'>
+  <div className='border rounded-lg overflow-hidden relative'>
+
+
+    <img className='md:hidden lg:hidden max-w-full h-auto
+     -mt-12' src={xx99mark1} alt="Product Image 1" />
+     <img className='hidden sm:hidden lg:hidden md:block max-w-full h-auto
+     -mt-12' src={xx99mark1tb} alt="Product Image 1" />
+     <img className='hidden sm:hidden md:hidden lg:block max-w-full h-auto
+     -mt-12' src={xx99mark1des} alt="Product Image 1" />
      
-      <div className='relative bg-white mt-40 '>
-        <div className='flex justify-center '>
-        <img className='md:w-1/4 lg:w-1/4 w-3/4 border rounded-lg mt-20  ' src={xx99mark1} alt="Product Image 1" />
-        </div>
-        <div className=' absolute bottom-0 left-1/2 transform -translate-x-1/2  flex flex-col  items-center justify-end text-center'>
-          <h4 className='text-black text-sm font-bold '>HEADPHONES</h4>
-          <div className='flex flex-row items-center justify-center'>
-            <p className='mr-2 text-gray-400 text-sm'>SHOP</p>
-            <Link to='/Headphones'>
-            <MdOutlineNavigateNext className='text-orange-700' />
-            </Link>
-          </div>
-        </div>
+     
+
+    <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-end text-center'>
+      <h4 className='text-black text-sm font-bold'>HEADPHONES</h4>
+      <div className='flex flex-row items-center justify-center'>
+        <p className='mr-2 text-gray-400 text-sm'>SHOP</p>
+        <Link to='/Headphones'>
+          <MdOutlineNavigateNext className='text-orange-700' />
+        </Link>
       </div>
-  
-      
+    </div>
+  </div>
+</div>
 
      
-      <div className="relative bg-white rounded-lg mt-20 w-full h-full flex justify-center items-center">
-
-  <img  className=' md:w-1/4 lg:w-1/4 -p-10 w-3/4   border rounded-lg h-auto justify-center items-center ' src={zx9} alt="Product Image 2" />
-  <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-7 flex flex-col items-center  text-center p-4  '>
-    <h4 className='text-black font-bold '>SPEAKERS</h4>
-    <span className='flex flex-row items-center justify-center mt-2 '>
-      <p className='text-gray-400 text-sm '>SHOP</p>
-      <Link to='/Speakers'>
-      <MdOutlineNavigateNext className='text-orange-500'/>
-      </Link>
-    </span>
     
+     
+<div className='relative max-w-xs  bg-white mt-20 '>
+  <div className='border rounded-lg overflow-hidden relative'>
+    <img className='md:hidden lg:hidden max-w-full h-auto -mt-12' 
+    src={zx9} alt="Product Image 1" />
+<img className='hidden sm:hidden lg:hidden md:block max-w-full h-auto -mt-12' 
+    src={zx9tb} alt="Product Image 1" />
+<img className='hidden sm:hidden md:hidden lg:block max-w-full h-auto -mt-12' 
+    src={zx9des} alt="Product Image 1" />
+
+
+    <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-end text-center'>
+      <h4 className='text-black text-sm font-bold'>SPEAKERS</h4>
+      <div className='flex flex-row items-center justify-center'>
+        <p className='mr-2 text-gray-400 text-sm'>SHOP</p>
+        <Link to='/Speakers'>
+          <MdOutlineNavigateNext className='text-orange-700' />
+        </Link>
+      </div>
     </div>
   </div>
-  <div className="relative bg-white mt-20 mb-20  flex justify-center">
-  <img className='md:w-1/4 lg:w-1/4 w-3/4 h-1/8 -mt-15 border rounded-lg' src={yx1} alt="Product Image 2" />
-  <div className='absolute bottom-0 left-1/2  transform -translate-x-1/2 flex flex-col items-center  text-center p-4  '>
-    <h4 className='text-black font-bold '>EARPHONES</h4>
-    <span className='flex flex-row items-center justify-center mt-2 '>
-      <p className='text-gray-400 text-sm '>SHOP</p>
-      <Link to='/Earphones'>
-      <MdOutlineNavigateNext className='text-orange-500'/>
-      </Link>
-    </span>
+</div>
+
+      
+<div className='relative max-w-xs  bg-white mt-20 mb-20 '>
+  <div className='border rounded-lg overflow-hidden relative'>
+    <img className='md:hidden lg:hidden max-w-full h-auto 
+    -mt-12' src={yx1} alt="Product Image 1" />
+ <img className='hidden sm:hidden lg:hidden md:block max-w-full h-auto 
+    -mt-12' src={yx1tb} alt="Product Image 1" />
+ <img className='hidden sm:hidden md:hidden lg:block max-w-full h-auto 
+    -mt-12' src={yx1des} alt="Product Image 1" />
+
+    <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-end text-center'>
+      <h4 className='text-black text-sm font-bold'>EARPHONES</h4>
+      <div className='flex flex-row items-center justify-center'>
+        <p className='mr-2 text-gray-400 text-sm'>SHOP</p>
+        <Link to='/Earphones'>
+          <MdOutlineNavigateNext className='text-orange-700' />
+        </Link>
+      </div>
     </div>
   </div>
-  </div>
-  <div className='bg-orange-main  md:w-3/4 flex text-center 
-  justify-center border rounded-lg flex flex-col mx-auto'>
+</div>
+</div>
+
+
+      
+      
+  
+  <div className='bg-orange-main w-80 md:w-3/4 flex text-center 
+  justify-center border rounded-lg flex flex-col mx-auto '>
     <div className='md: flex items-center justify-center overflow-y-hidden'>
   <img className='h-45 w-40 mb-7 flex items-center justify-center mt-9' src={zx9sp}/>
   </div>
@@ -151,7 +193,7 @@ const Items = () => {
   </div>
   </div>
 
-  <div className='md:hidden mt-20 mb-30 relative border rounded-lg  mx-auto'>
+  <div className='md:hidden mt-20 mb-30 relative border rounded-lg w-80 mx-auto'>
     <img src={zzx9} className='md:hidden border rounded-lg '/>
     <div className='absolute top-0  mt-7'>
      <h1 className='text-3xl text-black font-bold mb-4 p-4'>ZX7 SPEAKER</h1>
@@ -193,8 +235,8 @@ const Items = () => {
    lg:gap-3 md:flex md:w-3/4 mx-auto md:items-center md:gap-3'>
    <img src={yx1md} style={{width:'50%'}} className='hidden sm:hidden lg:hidden md:block  border rounded-lg'/>
    <img src={yx1lg}className='hidden sm:hidden md:hidden lg:block w-1/2 border rounded-lg'/>
-    <img className='lg:w-3/4 md:hidden sm:w-full lg:hidden border rounded-lg' src={yx1er} alt="Product Image" />
-    <div className='w-full  py-9 border rounded-lg bg-gray-200 mt-5 justify-center md:py-9 md:w-1/2 lg:w-full lg:py-12 lg:ml-0 lg:mt-0 lg:mb-0 '>
+    <img className='w-80 mx-auto md:hidden sm:w-full lg:hidden border rounded-lg' src={yx1er} alt="Product Image" />
+    <div className='w-80 mx-auto  py-9 border rounded-lg bg-gray-200 mt-5 justify-center md:py-9 md:w-1/2 lg:w-full lg:py-12 lg:ml-0 lg:mt-0 lg:mb-0 '>
       <h1 className='text-3xl lg:text-4xl md:text-4xl text-black mt-4 mb-8 font-bold'>YX1 EARPHONES</h1>
       <Link to='/yx1'>
         <button className='border border-black mb-6 text-black p-3 rounded hover:bg-black hover:text-white'>
@@ -209,7 +251,7 @@ const Items = () => {
 
 </div>
 
-  
+  </div>
 
 
   

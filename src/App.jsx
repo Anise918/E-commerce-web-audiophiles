@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
 import './index.css';
+import {MdOutlineNavigateNext} from 'react-icons/md'
+
+
 
 import { AiOutlineShoppingCart} from 'react-icons/ai'
 import { ImMenu } from 'react-icons/im'
@@ -12,6 +15,19 @@ import bestGear from '/cart/shared/mobile/image-best-gear.jpg'
 import bestgearmd from '/product-xx99-mark-two-headphones/tablet/image-gallery-1.jpg'
 
 import bestgearlg from '/cart/shared/desktop/image-best-gear.jpg'
+import yx1 from '/product-yx1-earphones/mobile/image-product.jpg'
+import zx9 from '/cart/product-zx9-speaker/mobile/image-category-page-preview.jpg'
+import xx99mark1 from'/product-xx99-mark-one-headphones/mobile/image-product.jpg'
+import xx99mark1tb from'/product-xx99-mark-one-headphones/tablet/image-product.jpg'
+import xx99mark1des from'/product-xx99-mark-one-headphones/desktop/image-product.jpg'
+
+import zx9tb from '/cart/product-zx9-speaker/tablet/image-product.jpg'
+import zx9des from '/cart/product-zx9-speaker/desktop/image-product.jpg'
+
+import yx1tb from '/product-yx1-earphones/tablet/image-product.jpg'
+import yx1des from '/product-yx1-earphones/desktop/image-product.jpg'
+
+
 
 
 import Items from './Components/Items';
@@ -29,7 +45,7 @@ import Cartcard from './Components/Cartcard';
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
  
-
+  
 
 
 
@@ -48,7 +64,7 @@ function App() {
 
   return (
     <BrowserRouter className='w-3/4 mx-auto'>
-    <header className='lg:hidden header bg-black text-white flex flex-row justify-around p-10'>
+    <header className='lg:hidden md:hidden  pb-8 header bg-black text-white flex flex-row justify-around p-10'>
     <ImMenu onClick={toggleMenu} className='cursor-pointer'/>
     
      <p className='font-bold text-xl'>audiophile</p>
@@ -59,7 +75,7 @@ function App() {
       
     </header>
 
-    <header className='hidden sm:hidden md:hidden lg:flex bg-black pt-7 uppercase items-center justify-evenly'>
+    <header className='hidden sm:hidden md:flex bg-black pt-7 pb-8 uppercase items-center justify-evenly'>
   <div>
     <h1 className='text-white lowercase text-3xl font-bold'>audiophile</h1>
   </div>
@@ -141,12 +157,15 @@ function App() {
           <Route path='/x59' element={<X59/>}/>
         </Routes>
       
+        
        
+
       
+ 
+        
 
 
-
-    <div className='mt-20 p-50 justify-center md:w-3/4 mx-auto'>
+    <div className='mt-20 p-50 justify-center w-3/4 mx-auto'>
       <div className='flex justify-center'>
     <img className=' lg:hidden md:hidden  border rounded-lg ' src={bestGear}/>
   
@@ -156,7 +175,7 @@ function App() {
     <div className='lg:hidden mb-10'>
       <p className='text-black  text-3xl text-center uppercase font-semibold mt-10 mb-10'> Bringing you the 
       <span className='text-orange-800 '> best </span> audio gear.</p>
-      <p className='w-3/4 text-black font-light  items-center flex justify-center '>Located at the heart of NewYork City
+      <p className=' text-black font-light  items-center flex justify-center '>Located at the heart of NewYork City
       AudioPhile is the premier store for high end
       headphones,earphones,speakers and audio
       accessories. We have large showroom and
