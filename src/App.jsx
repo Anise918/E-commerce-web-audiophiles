@@ -216,19 +216,32 @@ function App() {
   <div className= 'w-full'>
     <div className='md:w-1/2 md:flex flex-row  items-center '>
       <div className='  text-center md:text-left md:flex justify-center '>
-        <h4 className='items-center text-center justify-between mt-10 
-        text-2xl  font-bold md:mt-2 mr-14 '>audiophile</h4>
-        <div className='md:flex flex-row gap-4 '>
-          <p className='uppercase text-sm font-semibold mt-5'>Home</p>
-          <p className='uppercase text-sm font-semibold mt-5'>Headphones</p>
-          <p className='uppercase text-sm font-semibold mt-5'>Speakers</p>
-          <p className='uppercase text-sm font-semibold mt-5 mb-15'>Earphones</p>
+        <h4 className='items-center  justify-between mt-10 
+        text-3xl  font-bold md:mt-2  '>audiophile</h4>
+        <div className='flex flex-col gap-4 '>
+          
+        <ul className='flex flex-col gap-4 text-white font-light text-2xl'>
+  <li className='uppercase text-xl font-semibold mt-5 hover:text-orange-700'>
+    <Link to='/'>Home</Link>
+  </li>
+  <li className='uppercase text-xl font-semibold mt-5  hover:text-orange-700'>
+    <Link to='/headphones'>Headphones</Link>
+  </li>
+  <li className='uppercase text-xl font-semibold mt-5 hover:text-orange-700'>
+    <Link to='/speakers'>Speakers</Link>
+  </li>
+  <li className='uppercase text-xl font-semibold mt-5 hover:text-orange-700'>
+    <Link to='/earphones'>Earphones</Link>
+  </li>
+</ul>
+
+
         </div>
       </div>
     </div>
   
     <div className='md:w-3/4 lg:w-1/2'>
-      <p className='text-white font-light md:text-sm  mt-10 text-center md:text-left'>
+      <p className='text-gray-300  text-md  mt-10  md:text-left'>
         Audiophile is an all-in-one stop to fulfill your audio needs.
          We are a small team of music lovers and sound 
         specialists who are devoted to helping you get the most out of personal audio.
@@ -257,12 +270,24 @@ function App() {
       <h1 className='text-white text-3xl font-bold'>audiophile</h1>
     </div>
     <div>
-    <ul className='flex flex-row gap-4 text-white '>
-          <li className='uppercase text-sm font-semibold '>Home</li>
-          <li className='uppercase text-sm font-semibold '>Headphones</li>
-          <li className='uppercase text-sm font-semibold '>Speakers</li>
-          <li className='uppercase text-sm font-semibold '>Earphones</li>
-          </ul>
+    
+    <ul className='flex flex-row gap-4 text-white'>
+  <li className='uppercase text-sm font-semibold hover:text-orange-main'>
+    <Link to='/'>Home</Link>
+  </li>
+  <li className='uppercase text-sm font-semibold hover:text-orange-main'>
+    <Link to='/headphones'>Headphones</Link>
+  </li>
+  <li className='uppercase text-sm font-semibold hover:text-orange-main'>
+    <Link to='/speakers'>Speakers</Link>
+  </li>
+  <li className='uppercase text-sm font-semibold hover:text-orange-main'>
+    <Link to='/earphones'>Earphones</Link>
+  </li>
+</ul>
+
+
+
     </div>
     </div>
     <div className='flex justify-around pb-15'>

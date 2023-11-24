@@ -60,7 +60,7 @@ const Items = () => {
   <div className='absolute lg:left-1/4 top-1/2  transform -translate-x-1/2 -translate-y-1/2  '>
   <h4 className='text-sm text-gray-500 tracking-widest'>NEW PRODUCT</h4>
   <h1 className='font-semibold mb-4 capitalize text-white text-6xl'>XX99 Mark II <br/> Headphones</h1>
-  <p className='text-sm  mb-4 text-white font-light'>
+  <p className='text-md  mb-4 text-white font-light'>
     Experience natural, lifelike audio and exceptional build quality made for the<br/> passionate music enthusiast.
   </p>
   <Link to='/product'>
