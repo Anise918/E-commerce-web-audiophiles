@@ -51,10 +51,10 @@ const X59 = () => {
     
 
   return (
-    <div>
-   <Link className='text-gray-500 mt-5 mb-5 ' to ='/'>Go back</Link>
-   <div className='w-3/4 mx-auto'>
-   <div className='flex justify-center '>
+    <div className=''>
+   <Link className='text-gray-500 mt-10 mb-5 ' to ='/'>Go back</Link>
+   <div className=' w-3/4 mx-auto'>
+   <div className='flex justify-center mt-10'>
           <img src={xx59Head} className='md:hidden lg:hidden w-full  mb-5'/>
           </div>
           <div className='md:hidden lg:hidden'>
@@ -94,8 +94,10 @@ const X59 = () => {
 
      <div className='md:flex  '>
      <div className='items-center mt-10'>
-      <img src={xx59Headmd} className='hidden sm:hidden lg:hidden md:block w-3/4 mt-8 mb-10 mx-auto'/>
-    <img style={{width:''}}src={xx59Headlg} className='hidden sm:hidden md:hidden lg:block w-3/4 mx-auto'/>
+      <img src={xx59Headmd} className='hidden sm:hidden lg:hidden 
+      md:block w-3/4 mt-8 mb-15 mx-auto'/>
+    <img style={{width:''}}src={xx59Headlg} className='hidden sm:hidden md:hidden
+     lg:block mt-7 w-3/4 mx-auto'/>
     </div>
     <div className='hidden sm:hidden md:block w-3/4 mt-10 md:mb:9 items-center '>
  <h4 className='text-orange-500 text-sm -tracking-wide line-height-12 flex mt-3  justify-start'>NEW PRODUCT</h4>
@@ -127,7 +129,7 @@ const X59 = () => {
           
           </button>
         
-        <button className='bg-orange-main text-white px-10  py-2 '>ADD TO <br/>
+        <button className='bg-orange-main text-white px-4 py-2 '>ADD TO
         CART</button>
        </div>
       
@@ -142,7 +144,7 @@ const X59 = () => {
         <div className='lg:w-1/2 '>
 
     < h1 className='font-semibold text-3xl mb-7 mt-10'>FEATURES</h1>
-    <p className='text-gray-600  mb-5'>
+    <p className='font-light  mb-5'>
     These headphones have been crafted from durable, 
     high-quality materials tough enough to take anywhere.
     Its compact solid design fuses comfort and minimalist 
@@ -150,7 +152,7 @@ const X59 = () => {
     is assured by the latest wireless technology engineered 
     for audio synchronization with videos.
     
-    <br className='text-gray-600  '/>
+    <br className='font-light'/>
     More than a simple pair of headphones, this headset 
     features a pair of built in microphones for clear, 
     hands-free calling when paired with a compartible 

@@ -26,7 +26,8 @@ const Speakers = () => {
   return (
     <div className=' '>
       
-    <h1 className='bg-black py-7 text-white text-4xl text-center font-semibold '>
+    <h1 className='bg-black py-7 text-white text-4xl text-center 
+      font-semibold '>
       SPEAKERS</h1>
       <Link className='text-black font-light mt-5 ' to ='/'>Go back</Link>
       <div className='w-3/4 mx-auto'>

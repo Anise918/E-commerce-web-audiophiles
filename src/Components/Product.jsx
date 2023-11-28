@@ -54,7 +54,7 @@ const Product = () => {
     
     <div>
       
-    <Link className='text-gray-500 mt-5 ' to ='/'>Go back</Link>
+    <Link className='text-gray-500 mt-20 ' to ='/'>Go back</Link>
     <div className='w-3/4 mx-auto'>
     <div className='flex justify-center  '>
       

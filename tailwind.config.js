@@ -11,10 +11,15 @@ module.exports = {
           light: '#FBAF85',
           main: '#D87D4A',
           dark: '#9F531A',
+          
         },
         gray: {
           custom: '#4C4C4C',
+          shadow: '#242424',
         },
+        grey:{
+          light: '#161616',
+        }
       },
     },
   },

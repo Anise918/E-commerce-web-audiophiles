@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import xxheadp from '/cart/home/mobile/image-header.jpg'
 import zx9sp from '/cart/home/mobile/image-speaker-zx9.png'
@@ -42,11 +44,12 @@ const Items = () => {
     <div className='  absolute inset-0 flex flex-col justify-center items-center'>
       <h4 className='text-sm text-gray-500 tracking-widest'>NEW PRODUCT</h4>
       <h1 className='font-semibold mb-4 capitalize text-white text-4xl'>XX99 Mark II <br/> Headphones</h1>
-      <p className='text-sm text-center mb-4 text-gray-300'>
-        Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
+      <p className='text-md text-center mb-4 text-gray-200 font-light'>
+        Experience natural, lifelike audio and exceptional 
+        build quality made for the passionate music enthusiast.
       </p>
       <Link to='/product'>
-        <button className='bg-orange-main py-2 px-4 rounded text-white hover:bg-orange-600 text-lg font-semibold'>
+        <button className='bg-orange-main py-2 px-4 text-white hover:bg-orange-600 text-lg font-semibold'>
           <span>SEE PRODUCT</span>
         </button>
       </Link>

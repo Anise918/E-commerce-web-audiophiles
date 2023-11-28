@@ -31,7 +31,8 @@ const Headphones = () => {
   return (
     <div>
       
-        <h1 className='bg-black text-white py-7 text-4xl uppercase flex justify-center  font-semibold'>Headphones</h1>
+        <h1 className='bg-black text-white py-7 text-3xl 
+        uppercase flex justify-center  font-semibold  top-0'>Headphones</h1>
         <Link className='text-gray-500 mt-5 ' to ='/'>Go back</Link>
         <div className='w-3/4 mx-auto'>
         <div className='flex justify-center'>

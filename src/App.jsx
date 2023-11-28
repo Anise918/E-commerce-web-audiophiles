@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
 import './index.css';
@@ -64,10 +65,11 @@ function App() {
 
   return (
     <BrowserRouter className='w-3/4 mx-auto'>
-    <header className='lg:hidden md:hidden  pb-8 header bg-black text-white flex flex-row justify-around p-10'>
+    <header className='lg:hidden md:hidden pb-8 fixed  w-full z-10 top-0 bg-grey-light
+     text-white flex flex-row justify-around p-10  '>
     <ImMenu onClick={toggleMenu} className='cursor-pointer'/>
     
-     <p className='font-bold text-xl'>audiophile</p>
+     <p className='font-bold text-2xl'>audiophile</p>
     
      <AiOutlineShoppingCart />
      
@@ -75,7 +77,8 @@ function App() {
       
     </header>
 
-    <header className='hidden sm:hidden md:flex bg-black pt-7 pb-8 uppercase items-center justify-evenly'>
+    <header className='header hidden sm:hidden md:flex  
+     bg-grey-light pt-7 pb-8 uppercase items-center fixed w-full z-10 justify-evenly'>
   <div>
     <h1 className='text-white lowercase text-3xl font-bold'>audiophile</h1>
   </div>
@@ -113,21 +116,26 @@ function App() {
     <nav
         className={`${
           isMenuOpen ? 'block' : 'hidden'
-        } lg:hidden w-1/2 h-full bg-black text-white font-semibold flex justify-center text-lg uppercase absolute z-10 `}
+        } lg:hidden w-2/3  h-screen bg-black text-white 
+        font-semibold flex justify-center text-lg uppercase cursor-pointer 
+         rounded-lg fixed top-0 left-0 z-10 `}
       >
-        <ul>
+       
+
+
+        <ul className='justify-center text-center pt-20 text-md'>
          
         <li className='py-2'>
   <Link to="/" onClick={closeMenu} className='hover:text-orange-700'>
     Home
   </Link>
 </li>
-<li className='py-2'>
+<li className='py-3'>
   <Link to="/headphones" onClick={closeMenu} className='hover:text-orange-700'>
     Headphones
   </Link>
 </li>
-<li className='py-2'>
+<li className='py-3'>
   <Link to="/speakers" onClick={closeMenu} className='hover:text-orange-700'>
     Speakers
   </Link>
@@ -213,24 +221,24 @@ function App() {
   
      <div>
       <footer className='md:hidden lg:hidden  bg-black text-white mt-20 flex flex-col items-center justify-center'>
-  <div className= 'w-full'>
+  <div className= 'w-3/4 mx-auto'>
     <div className='md:w-1/2 md:flex flex-row  items-center '>
       <div className='  text-center md:text-left md:flex justify-center '>
         <h4 className='items-center  justify-between mt-10 
         text-3xl  font-bold md:mt-2  '>audiophile</h4>
         <div className='flex flex-col gap-4 '>
           
-        <ul className='flex flex-col gap-4 text-white font-light text-2xl'>
-  <li className='uppercase text-xl font-semibold mt-5 hover:text-orange-700'>
+        <ul className='flex flex-col gap-4 text-white font-light '>
+  <li className='uppercase text-md font-semibold mt-5 hover:text-orange-700'>
     <Link to='/'>Home</Link>
   </li>
-  <li className='uppercase text-xl font-semibold mt-5  hover:text-orange-700'>
+  <li className='uppercase text-md font-semibold mt-5  hover:text-orange-700'>
     <Link to='/headphones'>Headphones</Link>
   </li>
-  <li className='uppercase text-xl font-semibold mt-5 hover:text-orange-700'>
+  <li className='uppercase text-md font-semibold mt-5 hover:text-orange-700'>
     <Link to='/speakers'>Speakers</Link>
   </li>
-  <li className='uppercase text-xl font-semibold mt-5 hover:text-orange-700'>
+  <li className='uppercase text-md font-semibold mt-5 hover:text-orange-700'>
     <Link to='/earphones'>Earphones</Link>
   </li>
 </ul>
@@ -241,7 +249,7 @@ function App() {
     </div>
   
     <div className='md:w-3/4 lg:w-1/2'>
-      <p className='text-gray-300  text-md  mt-10  md:text-left'>
+      <p className='text-gray-300 text-center text-md  mt-10  md:text-left'>
         Audiophile is an all-in-one stop to fulfill your audio needs.
          We are a small team of music lovers and sound 
         specialists who are devoted to helping you get the most out of personal audio.
